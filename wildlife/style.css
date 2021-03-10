@@ -358,7 +358,7 @@ main {
 .footer {
     margin: 0 auto;
     height: 359px;
-    background: #02160b url(assets/img/bcg-footer.jpg) center no-repeat;
+    background: #181617 url(assets/img/bcg-footer.jpg) center no-repeat;
 }
 
 .footer__wrapper {
