@@ -8,6 +8,8 @@ a {
     color: #F7F7F7;
 }
 
+
+
 li {
     list-style: none;
 }
@@ -94,6 +96,10 @@ button {
 .header__logo-ico {
     padding-left: 1px;
     margin-top: 19px
+}
+
+.header__logo-ico:hover {
+    cursor: pointer;
 }
 
 .header__title {
@@ -262,22 +268,27 @@ main {
 
 .btn-ico {
     position: absolute;
-    top: 45%;
+    top: 40%;
     border: none; 
     outline: none;
     font-size: 0;
     width: 30px;
-    height: 40px;
+    height: 60px;
+}
+
+.btn-ico:hover {
+    width: 33px;
+    height: 65px;
 }
 
 .btn-prev {    
     left: 0;
-    background: url(assets/ico/ico-prev.svg) 0 0 / 100% no-repeat;
+    background: url(assets/ico/ico-frame-prev.svg) 0 0 / 100% no-repeat;
 }
 
 .btn-next {    
     right: 0;
-    background: url(assets/ico/ico-next.svg) 0 0 / 100% no-repeat;
+    background: url(assets/ico/ico-frame-next.svg) 0 0 / 100% no-repeat;
 }
 
 /* slider styles end */
@@ -328,6 +339,16 @@ main {
     background: #CD6326;
     border: 1px solid #CD6326;
     border-radius: 0px 5px 5px 0px;
+}
+
+.get__notified-submit:hover {
+    background: #E39128;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+.get__notified-submit:active {
+    background: #8F5613;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* get notified styles end */
