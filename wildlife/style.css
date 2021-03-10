@@ -218,7 +218,7 @@ main {
 
 /* slider styles start */
 .slider__wrapper {
-    width: 1200px;
+    max-width: 1200px;
     position: relative;
     margin: 0 auto;
 }
@@ -226,20 +226,16 @@ main {
 .slider-container {
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 30px;    
-    overflow: hidden;
-    z-index: 10;
 }
 
 .slider-track {
     display: flex;
     overflow: hidden;
-    justify-content: space-evenly;    
-    transition: 0.2s;
+    justify-content: space-between;
+    
 }
 .slider-item {
-    position: relative;
-    padding: 0 30px 0 30px;
+    /* position: relative;     */
     height: 360px;
     width: 300px;
 }
