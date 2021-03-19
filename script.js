@@ -37,9 +37,8 @@ function playAudio(src) {
     audio.play();
 };
 
-
 const startSound = (event) => {
-    const note = event.target.dataset.note;
+    const note = event.target.dataset.note;    
     const src = `assets/audio/${note}.mp3`;
     playAudio(src);
 
@@ -87,6 +86,35 @@ const stopCorrespondOver = () => {
 
 piano.addEventListener('mousedown', startCorrespondOver);
 piano.addEventListener('mouseup', stopCorrespondOver);
+
+// Add keybord keys listeners
+
+const startSoundKey = (event) => {
+    if(event.repeat) return;
+
+    const key = event.code.slice(-1);
+    pianoKeys.forEach((elem) => {             
+        if (key == elem.dataset.letter) {                      
+            const note = elem.dataset.note;    
+            const src = `assets/audio/${note}.mp3`;
+            playAudio(src);
+            elem.classList.add('piano-key-active');
+        };
+    });
+};
+
+const stopSoundKey = (event) => {
+
+    const key = event.code.slice(-1);
+    pianoKeys.forEach((elem) => {             
+        if (key == elem.dataset.letter) {
+            elem.classList.remove('piano-key-active');
+        };
+    });
+}
+
+window.addEventListener('keydown', startSoundKey);
+window.addEventListener('keyup', stopSoundKey);
 
 
 
